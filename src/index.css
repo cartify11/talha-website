@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-gold: 198, 164, 119;
+    --color-dark-bg: 0, 0, 0;
+    --color-dark-surface: 8, 10, 12;
+  }
+
+  body {
+    background-color: #000000;
+    color: #F5F5F5;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+/* Custom cinematic glow & effects */
+.gold-glow {
+  box-shadow: 0 0 30px -5px rgba(198, 164, 119, 0.25);
+}
+
+.gold-glow-subtle {
+  box-shadow: 0 0 20px -5px rgba(198, 164, 119, 0.12);
+}
+
+.gold-border-glow {
+  border-color: rgba(198, 164, 119, 0.35);
+  box-shadow: 0 0 15px -3px rgba(198, 164, 119, 0.2);
+}
+
+.cinematic-card {
+  background: linear-gradient(180deg, rgba(16, 20, 26, 0.7) 0%, rgba(9, 11, 14, 0.9) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cinematic-card:hover {
+  border-color: rgba(198, 164, 119, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px -5px rgba(198, 164, 119, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #040507;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e2430;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C6A477;
+}
