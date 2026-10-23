@@ -1,9 +1,9 @@
 import { supabase, isSupabaseConfigured, DatabaseProject } from '../lib/supabase';
 import { ProjectItem, projectsList as defaultProjects } from '../data/projectsData';
 
-const LOCAL_STORAGE_PROJECTS_KEY = 'talha_portfolio_dynamic_projects_v4';
-const LOCAL_STORAGE_SEEDED_KEY = 'talha_portfolio_dynamic_seeded_v4';
-const LOCAL_STORAGE_DELETED_KEY = 'talha_portfolio_deleted_slugs_v4';
+const LOCAL_STORAGE_PROJECTS_KEY = 'talha_portfolio_dynamic_projects_v5';
+const LOCAL_STORAGE_SEEDED_KEY = 'talha_portfolio_dynamic_seeded_v5';
+const LOCAL_STORAGE_DELETED_KEY = 'talha_portfolio_deleted_slugs_v5';
 
 // Helper to convert database record to ProjectItem
 export const mapDbToProjectItem = (db: DatabaseProject): ProjectItem => {

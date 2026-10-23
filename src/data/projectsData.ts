@@ -39,7 +39,7 @@ export const projectsList: ProjectItem[] = [
     status: 'live',
     previewImage: '/assets/madrassa-saas-3d.jpg',
     liveUrl: 'https://madrassa-website.vercel.app',
-    appUrl: 'https://web-production-6fe8a.up.railway.app/login',
+    appUrl: 'https://madrassa-website.vercel.app/#preview',
     githubUrl: null,
     accessLabel: 'Open Live Website ↗',
     technologies: ['React', 'Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Railway', 'Vercel'],
