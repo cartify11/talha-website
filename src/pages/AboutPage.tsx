@@ -69,18 +69,18 @@ export const AboutPage: React.FC = () => {
                 I am a passionate software engineer and AI developer with deep expertise in crafting robust, user-centric web applications, intelligent agents, and scalable enterprise platforms. I thrive on translating abstract technical complexity into elegant, reliable software products.
               </p>
               <p className="text-zinc-400">
-                Over the past 4+ years, I have architected and deployed modern digital solutions spanning generative AI retrieval systems, real-time multiplayer SaaS suites, cross-platform mobile apps, and high-throughput enterprise management portals. My work centers on writing clean, maintainable code backed by rigorous testing.
+                Over the past 2+ years, I have architected and deployed modern digital solutions spanning generative AI retrieval systems, real-time multiplayer SaaS suites, cross-platform mobile apps, and high-throughput enterprise management portals. My work centers on writing clean, maintainable code backed by rigorous testing.
               </p>
             </div>
 
             {/* Quick Stats Grid */}
             <div className="grid grid-cols-3 gap-4 p-5 rounded-2xl bg-dark-900/80 border border-white/[0.06]">
               <div>
-                <div className="font-heading text-2xl sm:text-3xl font-bold text-white">4+</div>
+                <div className="font-heading text-2xl sm:text-3xl font-bold text-white">2+</div>
                 <div className="text-[11px] text-zinc-400 font-medium uppercase tracking-wider mt-1">Years Exp.</div>
               </div>
               <div className="border-l border-white/[0.06] pl-4">
-                <div className="font-heading text-2xl sm:text-3xl font-bold text-white">35+</div>
+                <div className="font-heading text-2xl sm:text-3xl font-bold text-white">20+</div>
                 <div className="text-[11px] text-zinc-400 font-medium uppercase tracking-wider mt-1">Projects Built</div>
               </div>
               <div className="border-l border-white/[0.06] pl-4">

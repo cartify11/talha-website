@@ -11,8 +11,8 @@ interface StatsProps {
 
 export const Stats: React.FC<StatsProps> = ({
   stats = [
-    { value: '4+', label: 'Years Experience' },
-    { value: '35+', label: 'Projects Completed' },
+    { value: '2+', label: 'Years Experience' },
+    { value: '20+', label: 'Projects Completed' },
     { value: '20+', label: 'Happy Clients' },
   ],
 }) => {
