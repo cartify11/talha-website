@@ -17,18 +17,25 @@ import { Skill3DVisual } from './Skill3DVisual';
 
 const titleToSkillId: { [key: string]: string } = {
   'AI Software': 'ai-software-developer',
+  'AI Software Development': 'ai-software-developer',
   'AI Software Developer': 'ai-software-developer',
   'AI & WordPress Web': 'ai-web-developer',
+  'AI & WordPress Web Development': 'ai-web-developer',
   'AI & WordPress Web Developer': 'ai-web-developer',
   'Mobile App': 'mobile-app-developer',
+  'Mobile App Development': 'mobile-app-developer',
   'Mobile App Developer': 'mobile-app-developer',
   'Management System': 'management-system-developer',
+  'Management System Development': 'management-system-developer',
   'Management System Developer': 'management-system-developer',
   'Browser Extension & Plugin': 'browser-extension-plugin-developer',
+  'Browser Extension & Plugin Development': 'browser-extension-plugin-developer',
   'Browser Extension & Plugin Developer': 'browser-extension-plugin-developer',
   'E-commerce & Store': 'ecommerce-store-developer',
+  'E-commerce & Store Development': 'ecommerce-store-developer',
   'E-commerce & Store Developer': 'ecommerce-store-developer',
   'SaaS System': 'saas-system-developer',
+  'SaaS System Development': 'saas-system-developer',
   'SaaS System Developer': 'saas-system-developer',
   'Social Media Marketing': 'social-media-marketer',
   'Social Media Marketer': 'social-media-marketer',
@@ -193,43 +200,43 @@ export const SkillsPreview: React.FC = () => {
 
   const capabilities: SkillCard[] = [
     {
-      title: 'AI Software',
+      title: 'AI Software Development',
       category: 'Intelligent Systems',
       description: 'AI software and intelligent application development.',
       icon: Bot,
     },
     {
-      title: 'AI & WordPress Web',
+      title: 'AI & WordPress Web Development',
       category: 'Web Platforms',
       description: 'AI-powered websites, WordPress solutions, and modern web applications.',
       icon: Globe,
     },
     {
-      title: 'Mobile App',
+      title: 'Mobile App Development',
       category: 'iOS & Android',
       description: 'Mobile application development.',
       icon: Smartphone,
     },
     {
-      title: 'Management System',
+      title: 'Management System Development',
       category: 'Enterprise Applications',
       description: 'Custom management systems and administrative applications.',
       icon: Layers,
     },
     {
-      title: 'Browser Extension & Plugin',
+      title: 'Browser Extension & Plugin Development',
       category: 'Extensions & Tools',
       description: 'Browser extensions, custom plugins, and integrations.',
       icon: Puzzle,
     },
     {
-      title: 'E-commerce & Store',
+      title: 'E-commerce & Store Development',
       category: 'Online Commerce',
       description: 'Online stores and e-commerce website development.',
       icon: ShoppingBag,
     },
     {
-      title: 'SaaS System',
+      title: 'SaaS System Development',
       category: 'Cloud SaaS',
       description: 'Multi-tenant SaaS architectures, subscription systems, and cloud platforms.',
       icon: Cloud,
@@ -295,7 +302,7 @@ export const SkillsPreview: React.FC = () => {
         {/* 3D Interactive Capabilities Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
           {capabilities.map((item, index) => {
-            const isSpecialAI = item.title === 'AI Software' || item.title === 'AI Software Developer';
+            const isSpecialAI = item.title === 'AI Software' || item.title === 'AI Software Development' || item.title === 'AI Software Developer';
 
             return (
               <PreviewSkill3DCard
