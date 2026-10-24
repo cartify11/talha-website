@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, Mail } from 'lucide-react';
 import { CinematicPortrait } from './CinematicPortrait';
-import { GithubIcon, LinkedInIcon, WhatsAppIcon, FacebookIcon, TikTokIcon } from './SocialIcons';
+import { LinkedInIcon, WhatsAppIcon, FacebookIcon, TikTokIcon } from './SocialIcons';
 
 interface HeroProps {
   onExploreProjects: () => void;
@@ -78,17 +78,6 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects, onWorkTogether })
                 <WhatsAppIcon className="w-4 h-4" />
               </a>
 
-              {/* GitHub */}
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub Profile"
-                title="GitHub"
-                className="w-10 h-10 rounded-full border border-white/[0.08] bg-dark-900/60 hover:bg-dark-850 flex items-center justify-center text-zinc-400 hover:text-white hover:border-gold-500/40 transition-all duration-300 hover:scale-105"
-              >
-                <GithubIcon className="w-4 h-4" />
-              </a>
 
               {/* LinkedIn */}
               <a

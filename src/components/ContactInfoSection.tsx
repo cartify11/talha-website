@@ -11,7 +11,7 @@ import {
   MessageCircle
 } from 'lucide-react';
 import { RealEmailBox } from './RealEmailBox';
-import { WhatsAppIcon, FacebookIcon, TikTokIcon, LinkedInIcon, GithubIcon } from './SocialIcons';
+import { WhatsAppIcon, FacebookIcon, TikTokIcon, LinkedInIcon } from './SocialIcons';
 
 interface ContactInfoSectionProps {
   onOpenContactModal?: () => void;
@@ -200,15 +200,7 @@ export const ContactInfoSection: React.FC<ContactInfoSectionProps> = ({ onOpenCo
                 >
                   <LinkedInIcon className="w-3.5 h-3.5" />
                 </a>
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-9 h-9 rounded-full border border-white/[0.08] bg-dark-900 hover:bg-dark-850 flex items-center justify-center text-zinc-400 hover:text-white hover:scale-105 transition-all"
-                  title="GitHub"
-                >
-                  <GithubIcon className="w-3.5 h-3.5" />
-                </a>
+
               </div>
             </div>
 

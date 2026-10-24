@@ -8,7 +8,7 @@ import {
   Sparkles, 
   AlertCircle 
 } from 'lucide-react';
-import { GithubIcon, LinkedInIcon, WhatsAppIcon, FacebookIcon, TikTokIcon } from '../components/SocialIcons';
+import { LinkedInIcon, WhatsAppIcon, FacebookIcon, TikTokIcon } from '../components/SocialIcons';
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -238,17 +238,6 @@ export const ContactPage: React.FC = () => {
                   <LinkedInIcon className="w-4 h-4" />
                 </a>
 
-                {/* GitHub */}
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-10 h-10 rounded-full border border-white/[0.08] bg-dark-900 hover:bg-dark-850 flex items-center justify-center text-zinc-400 hover:text-white hover:border-gold-500/40 transition-all"
-                  aria-label="GitHub"
-                  title="GitHub"
-                >
-                  <GithubIcon className="w-4 h-4" />
-                </a>
               </div>
             </div>
 

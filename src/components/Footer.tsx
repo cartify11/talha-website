@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Mail, Lock, ArrowRight, ExternalLink, MapPin, Sparkles } from 'lucide-react';
-import { GithubIcon, LinkedInIcon, WhatsAppIcon, FacebookIcon, TikTokIcon } from './SocialIcons';
+import { LinkedInIcon, WhatsAppIcon, FacebookIcon, TikTokIcon } from './SocialIcons';
 
 export const Footer: React.FC = () => {
   const navigate = useNavigate();
@@ -194,17 +194,6 @@ export const Footer: React.FC = () => {
                   <WhatsAppIcon className="w-3.5 h-3.5" />
                 </a>
 
-                {/* GitHub */}
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="GitHub"
-                  title="GitHub"
-                  className="w-8 h-8 rounded-full border border-white/[0.08] bg-dark-900/80 hover:bg-dark-850 flex items-center justify-center text-zinc-400 hover:text-white hover:border-gold-500/40 transition-all hover:scale-110"
-                >
-                  <GithubIcon className="w-3.5 h-3.5" />
-                </a>
 
                 {/* LinkedIn */}
                 <a
