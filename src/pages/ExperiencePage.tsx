@@ -109,7 +109,7 @@ export const ExperiencePage: React.FC = () => {
   ];
 
   const handleDownloadCV = () => {
-    const cvContent = `TALHA — AI & SOFTWARE DEVELOPER
+    const cvContent = `TALHA — AI ENGINEERING & SOFTWARE DEVELOPMENT
 Email: m.talha204567@gmail.com | Location: Pakistan, City Swabi (Worldwide Remote)
 
 PROFESSIONAL EXPERIENCE:
