@@ -24,7 +24,7 @@ export const Dev3DLogoBadge: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size =
         {/* Actual 3D Render Image */}
         <img
           src="/assets/ai-dev-3d-logo.jpg"
-          alt="AI Software Developer 3D Logo"
+          alt="AI Software 3D Logo"
           className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover/logo:scale-110"
         />
 

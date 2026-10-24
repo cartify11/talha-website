@@ -8,14 +8,14 @@ interface RealEmailBoxProps {
 }
 
 export const RealEmailBox: React.FC<RealEmailBoxProps> = ({
-  defaultSubject = 'AI Software Development Inquiry',
+  defaultSubject = 'AI Software',
   recipientEmail = 'm.talha204567@gmail.com',
   className = '',
 }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    service: defaultSubject,
+    service: defaultSubject || 'AI Software',
     message: '',
   });
 
@@ -181,15 +181,15 @@ export const RealEmailBox: React.FC<RealEmailBoxProps> = ({
               onChange={(e) => setFormData({ ...formData, service: e.target.value })}
               className="w-full px-4 py-3 bg-dark-950/90 border border-white/10 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 rounded-xl text-sm text-white outline-none transition-all"
             >
-              <option value="AI Software Developer">AI Software Developer</option>
-              <option value="AI & WordPress Web Developer">AI & WordPress Web Developer</option>
-              <option value="Mobile App Developer">Mobile App Developer</option>
-              <option value="Management System Developer">Management System Developer</option>
-              <option value="Browser Extension & Plugin Developer">Browser Extension & Plugin Developer</option>
-              <option value="E-commerce & Store Developer">E-commerce & Store Developer</option>
-              <option value="SaaS System Developer">SaaS System Developer</option>
-              <option value="Social Media Marketer">Social Media Marketer</option>
-              <option value="AI Video Editor">AI Video Editor</option>
+              <option value="AI Software">AI Software</option>
+              <option value="AI & WordPress Web">AI & WordPress Web</option>
+              <option value="Mobile App">Mobile App</option>
+              <option value="Management System">Management System</option>
+              <option value="Browser Extension & Plugin">Browser Extension & Plugin</option>
+              <option value="E-commerce & Store">E-commerce & Store</option>
+              <option value="SaaS System">SaaS System</option>
+              <option value="Social Media Marketing">Social Media Marketing</option>
+              <option value="AI Video Editing">AI Video Editing</option>
             </select>
           </div>
 

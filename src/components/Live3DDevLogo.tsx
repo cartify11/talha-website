@@ -186,7 +186,7 @@ export const Live3DDevLogo: React.FC<Live3DDevLogoProps> = ({
         {/* Photorealistic 3D Developer & Workstation Render */}
         <img
           src="/assets/photoreal-ai-dev.jpg"
-          alt="Photorealistic 3D AI Software Developer Workstation"
+          alt="Photorealistic 3D AI Software Workstation"
           className="w-full h-full object-cover object-center pointer-events-none"
           loading="eager"
         />

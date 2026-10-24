@@ -57,7 +57,7 @@ const Skill3DCard: React.FC<{ skill: SkillCategory; index: number }> = ({ skill,
     setTilt({ x: 0, y: 0, glowX: 50, glowY: 50 });
   };
 
-  const isSpecialAI = skill.title === 'AI Software Developer';
+  const isSpecialAI = skill.title === 'AI Software' || skill.title === 'AI Software Developer';
 
   return (
     <div
@@ -216,7 +216,7 @@ export const SkillsPage: React.FC = () => {
     {
       id: 'ai-software-developer',
       number: '01',
-      title: 'AI Software Developer',
+      title: 'AI Software',
       roleSubtitle: 'Specialized Expertise',
       description: 'AI software and intelligent application development.',
       scopePoints: [
@@ -229,7 +229,7 @@ export const SkillsPage: React.FC = () => {
     {
       id: 'ai-web-developer',
       number: '02',
-      title: 'AI & WordPress Web Developer',
+      title: 'AI & WordPress Web',
       roleSubtitle: 'Specialized Expertise',
       description: 'AI-powered websites, WordPress solutions, and modern web applications.',
       scopePoints: [
@@ -242,7 +242,7 @@ export const SkillsPage: React.FC = () => {
     {
       id: 'mobile-app-developer',
       number: '03',
-      title: 'Mobile App Developer',
+      title: 'Mobile App',
       roleSubtitle: 'Specialized Expertise',
       description: 'Mobile application development.',
       scopePoints: [
@@ -255,7 +255,7 @@ export const SkillsPage: React.FC = () => {
     {
       id: 'management-system-developer',
       number: '04',
-      title: 'Management System Developer',
+      title: 'Management System',
       roleSubtitle: 'Specialized Expertise',
       description: 'Custom management systems and administrative applications.',
       scopePoints: [
@@ -268,7 +268,7 @@ export const SkillsPage: React.FC = () => {
     {
       id: 'browser-extension-plugin-developer',
       number: '05',
-      title: 'Browser Extension & Plugin Developer',
+      title: 'Browser Extension & Plugin',
       roleSubtitle: 'Specialized Expertise',
       description: 'Browser extensions, custom plugins, and integrations.',
       scopePoints: [
@@ -281,7 +281,7 @@ export const SkillsPage: React.FC = () => {
     {
       id: 'ecommerce-store-developer',
       number: '06',
-      title: 'E-commerce & Store Developer',
+      title: 'E-commerce & Store',
       roleSubtitle: 'Specialized Expertise',
       description: 'Online stores and e-commerce website development.',
       scopePoints: [
@@ -294,7 +294,7 @@ export const SkillsPage: React.FC = () => {
     {
       id: 'saas-system-developer',
       number: '07',
-      title: 'SaaS System Developer',
+      title: 'SaaS System',
       roleSubtitle: 'Specialized Expertise',
       description: 'Multi-tenant SaaS architectures, subscription systems, and cloud platforms.',
       scopePoints: [
@@ -307,7 +307,7 @@ export const SkillsPage: React.FC = () => {
     {
       id: 'social-media-marketer',
       number: '08',
-      title: 'Social Media Marketer',
+      title: 'Social Media Marketing',
       roleSubtitle: 'Specialized Expertise',
       description: 'Data-driven social media growth, campaign strategies, and audience reach.',
       scopePoints: [
@@ -320,7 +320,7 @@ export const SkillsPage: React.FC = () => {
     {
       id: 'ai-video-editor',
       number: '09',
-      title: 'AI Video Editor',
+      title: 'AI Video Editing',
       roleSubtitle: 'Specialized Expertise',
       description: 'AI-assisted video editing, cinematic visual storytelling, and content creation.',
       scopePoints: [
