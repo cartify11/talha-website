@@ -375,7 +375,7 @@ export const CinematicWallCrashIntro: React.FC<IntroProps> = ({ onComplete }) =>
             {elapsed >= 3.0 && (
               <div className="mt-4 sm:mt-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-dark-950/80 border border-gold-500/40 text-gold-300 text-xs sm:text-sm font-semibold tracking-widest uppercase shadow-[0_0_25px_rgba(198,164,119,0.35)] animate-fadeIn">
                 <Sparkles className="w-3.5 h-3.5 text-gold-400" />
-                <span>AI ENGINEERING & SOFTWARE DEVELOPMENT</span>
+                <span>AI ENGINEER</span>
               </div>
             )}
           </div>

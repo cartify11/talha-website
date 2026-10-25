@@ -119,7 +119,7 @@ export const AboutPage: React.FC = () => {
                   Talha
                 </div>
                 <div className="text-xs text-gold-400/90 font-medium mt-0.5">
-                  AI Engineering & Software Development
+                  AI Engineer
                 </div>
               </div>
               <button
