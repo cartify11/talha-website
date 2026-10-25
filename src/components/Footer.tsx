@@ -96,7 +96,7 @@ export const Footer: React.FC = () => {
                   TALHA
                 </span>
                 <span className="text-xs text-zinc-400">
-                  AI Engineer
+                  AI Engineer & Software Development
                 </span>
               </div>
             </div>

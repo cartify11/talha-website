@@ -11,11 +11,11 @@ export const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
 
   const handleDownload = () => {
     // Generate a downloadable CV file for Talha
-    const cvContent = `TALHA — AI ENGINEER
+    const cvContent = `TALHA — AI ENGINEER & SOFTWARE DEVELOPMENT
 Email: m.talha204567@gmail.com | Location: Pakistan, City Swabi (Worldwide Remote)
 
 SUMMARY:
-Results-driven AI Engineer specializing in building high-performance web applications, generative AI integrations, mobile apps, and scalable enterprise management platforms.
+Results-driven AI Engineer & Software Development specialist specializing in building high-performance web applications, generative AI integrations, mobile apps, and scalable enterprise management platforms.
 
 CORE COMPETENCIES:
 • AI Development: LLMs, LangChain, RAG Systems, Vector Databases, Python, FastAPI

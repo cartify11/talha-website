@@ -26,7 +26,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects, onWorkTogether })
             <div className="inline-flex items-center gap-3">
               <span className="h-[1px] w-8 bg-gold-400" />
               <span className="text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-gold-400">
-                AI ENGINEER
+                AI ENGINEER & SOFTWARE DEVELOPMENT
               </span>
             </div>
 
