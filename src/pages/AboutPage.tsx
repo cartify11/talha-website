@@ -49,8 +49,7 @@ export const AboutPage: React.FC = () => {
           <div className="lg:col-span-7 space-y-8">
             
             <div className="space-y-3">
-              <div className="inline-flex items-center gap-3">
-                <span className="h-[1px] w-6 bg-gold-400" />
+              <div className="inline-flex items-center">
                 <span className="text-xs font-semibold tracking-[0.25em] uppercase text-gold-400">
                   ABOUT ME
                 </span>

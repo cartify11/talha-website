@@ -345,8 +345,7 @@ export const SkillsPage: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-3xl mb-16 space-y-4">
-          <div className="inline-flex items-center gap-3">
-            <span className="h-[1px] w-6 bg-gold-400" />
+          <div className="inline-flex items-center">
             <span className="text-xs font-semibold tracking-[0.25em] uppercase text-gold-400">
               CORE EXPERTISE
             </span>
