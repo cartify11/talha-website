@@ -23,8 +23,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects, onWorkTogether })
           <div className="lg:col-span-7 flex flex-col justify-center space-y-5 sm:space-y-6 text-left">
             
             {/* Eyebrow Pill */}
-            <div className="inline-flex items-center gap-3">
-              <span className="h-[1px] w-8 bg-gold-400" />
+            <div className="inline-flex items-center">
               <span className="text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-gold-400">
                 AI ENGINEER & SOFTWARE DEVELOPMENT
               </span>
