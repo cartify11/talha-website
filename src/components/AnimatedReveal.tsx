@@ -40,10 +40,10 @@ export const AnimatedReveal: React.FC<AnimatedRevealProps> = ({
 
   const style: React.CSSProperties = {
     opacity: isVisible ? 1 : 0,
-    transform: isVisible ? 'translate3d(0, 0, 0) scale(1)' : getInitialTransform(),
+    transform: isVisible ? 'none' : getInitialTransform(),
     transition: `opacity ${duration}ms cubic-bezier(0.16, 1, 0.3, 1), transform ${duration}ms cubic-bezier(0.16, 1, 0.3, 1)`,
     transitionDelay: `${delay}ms`,
-    willChange: 'opacity, transform',
+    willChange: isVisible ? 'auto' : 'opacity, transform',
   };
 
   return (
