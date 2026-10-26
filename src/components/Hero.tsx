@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, Mail } from 'lucide-react';
 import { CinematicPortrait } from './CinematicPortrait';
 import { LinkedInIcon, WhatsAppIcon, FacebookIcon, TikTokIcon } from './SocialIcons';
@@ -8,7 +8,29 @@ interface HeroProps {
   onWorkTogether: () => void;
 }
 
+const ROTATING_PHRASES = [
+  'Digital Experiences.',
+  'AI Software Systems.',
+  'Modern Web Platforms.',
+  'Cross-Platform Mobile Apps.',
+  'Scalable SaaS Engines.',
+];
+
 export const Hero: React.FC<HeroProps> = ({ onExploreProjects, onWorkTogether }) => {
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [isFading, setIsFading] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFading(true);
+      setTimeout(() => {
+        setPhraseIndex((prev) => (prev + 1) % ROTATING_PHRASES.length);
+        setIsFading(false);
+      }, 350);
+    }, 3400);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section id="home" className="relative pt-24 pb-6 sm:pt-28 sm:pb-8 lg:pt-32 lg:pb-10 flex flex-col justify-center overflow-hidden">
       
@@ -29,11 +51,17 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects, onWorkTogether })
               </span>
             </div>
 
-            {/* Main Headline */}
+            {/* Main Headline with Animated Rotating Words & Liquid Gold Gradient */}
             <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-[1.08] animate-hero-heading">
-              Building Intelligent{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-gold-300">
-                Digital Experiences.
+              <span className="block">Building Intelligent</span>
+              <span
+                className={`inline-block text-transparent bg-clip-text bg-gradient-to-r from-gold-100 via-gold-400 to-amber-200 bg-[length:200%_auto] animate-text-gradient-flow drop-shadow-[0_0_35px_rgba(198,164,119,0.35)] transition-all duration-300 ease-out ${
+                  isFading
+                    ? 'opacity-0 -translate-y-2 blur-[2px]'
+                    : 'opacity-100 translate-y-0 blur-0'
+                }`}
+              >
+                {ROTATING_PHRASES[phraseIndex]}
               </span>
             </h1>
 

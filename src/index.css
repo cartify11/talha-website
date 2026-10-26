@@ -139,6 +139,23 @@
   }
 }
 
+@keyframes textGradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-text-gradient-flow {
+  background-size: 200% auto;
+  animation: textGradientFlow 5s ease-in-out infinite;
+}
+
 /* Animation Utility Classes */
 .animate-hero-eyebrow {
   animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
