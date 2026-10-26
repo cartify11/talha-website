@@ -4,6 +4,7 @@ import { ArrowRight, Code2, ExternalLink, Sparkles } from 'lucide-react';
 import { ProjectItem } from '../data/projectsData';
 import { projectsService } from '../services/projectsService';
 import { CinematicProjectModal } from './CinematicProjectModal';
+import { AnimatedReveal } from './AnimatedReveal';
 
 export const ProjectsPreview: React.FC = () => {
   const [projects, setProjects] = useState<ProjectItem[]>([]);
@@ -37,39 +38,41 @@ export const ProjectsPreview: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-8">
-          <div className="space-y-3">
-            <div className="inline-flex items-center">
-              <span className="text-xs font-semibold tracking-[0.25em] uppercase text-gold-400">
-                FEATURED WORK
-              </span>
+        {/* Section Header with Reveal */}
+        <AnimatedReveal direction="up" delay={50}>
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-8">
+            <div className="space-y-3">
+              <div className="inline-flex items-center">
+                <span className="text-xs font-semibold tracking-[0.25em] uppercase text-gold-400">
+                  FEATURED WORK
+                </span>
+              </div>
+              <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
+                Selected Projects Showcase
+              </h2>
+              <p className="text-sm sm:text-base text-zinc-400 max-w-xl font-normal leading-relaxed pt-1">
+                Here are some of my recent production systems and client applications. Each solution represents robust engineering and tailored digital craft.
+              </p>
             </div>
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
-              Selected Projects Showcase
-            </h2>
-            <p className="text-sm sm:text-base text-zinc-400 max-w-xl font-normal leading-relaxed pt-1">
-              Here are some of my recent production systems and client applications. Each solution represents robust engineering and tailored digital craft.
-            </p>
-          </div>
 
-          {/* Filter Pills */}
-          <div className="flex flex-wrap items-center gap-2 bg-dark-950/80 p-1.5 rounded-full border border-white/[0.06] backdrop-blur-md self-start lg:self-end">
-            {filterTabs.map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-4 py-1.5 text-xs font-medium rounded-full transition-all duration-300 ${
-                  activeTab === tab
-                    ? 'bg-white text-dark-950 font-semibold shadow-md'
-                    : 'text-zinc-400 hover:text-white hover:bg-white/[0.05]'
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
+            {/* Filter Pills */}
+            <div className="flex flex-wrap items-center gap-2 bg-dark-950/80 p-1.5 rounded-full border border-white/[0.06] backdrop-blur-md self-start lg:self-end">
+              {filterTabs.map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-4 py-1.5 text-xs font-medium rounded-full transition-all duration-300 ${
+                    activeTab === tab
+                      ? 'bg-white text-dark-950 font-semibold shadow-md'
+                      : 'text-zinc-400 hover:text-white hover:bg-white/[0.05]'
+                  }`}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        </AnimatedReveal>
 
         {/* 2x2 Showcase Projects Grid or Empty State */}
         {filteredProjects.length === 0 ? (
@@ -87,11 +90,11 @@ export const ProjectsPreview: React.FC = () => {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {filteredProjects.map((project) => (
-              <div
-                key={project.id}
-                className="group rounded-2xl overflow-hidden bg-gradient-to-b from-dark-850/80 to-dark-950 border border-white/[0.07] hover:border-gold-500/40 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.9),0_0_25px_rgba(198,164,119,0.18)] flex flex-col"
-              >
+            {filteredProjects.map((project, index) => (
+              <AnimatedReveal key={project.id} direction="up" delay={index * 120} distance={28}>
+                <div
+                  className="group rounded-2xl overflow-hidden bg-gradient-to-b from-dark-850/80 to-dark-950 border border-white/[0.07] hover:border-gold-500/40 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.9),0_0_25px_rgba(198,164,119,0.18)] flex flex-col h-full"
+                >
                 {/* Project Visual / Dark Presentation Surface */}
                 <div 
                   onClick={() => setSelectedProject(project)}
@@ -237,23 +240,26 @@ export const ProjectsPreview: React.FC = () => {
 
               </div>
             </div>
+          </AnimatedReveal>
           ))}
         </div>
         )}
 
         {/* View All Projects Button */}
-        <div className="mt-12 text-center">
-          <button
-            onClick={() => {
-              navigate('/projects');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-dark-850 hover:bg-dark-800 border border-white/[0.1] hover:border-gold-500/40 text-xs font-semibold text-white transition-all shadow-md"
-          >
-            <span>Explore All Projects Archive</span>
-            <ArrowRight className="w-4 h-4 text-gold-400" />
-          </button>
-        </div>
+        <AnimatedReveal direction="up" delay={250}>
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => {
+                navigate('/projects');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-dark-850 hover:bg-dark-800 border border-white/[0.1] hover:border-gold-500/40 text-xs font-semibold text-white transition-all shadow-md shimmer-button hover:scale-105 active:scale-95 group"
+            >
+              <span>Explore All Projects Archive</span>
+              <ArrowRight className="w-4 h-4 text-gold-400 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
+        </AnimatedReveal>
 
       </div>
 

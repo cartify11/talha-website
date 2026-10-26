@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { RealEmailBox } from './RealEmailBox';
 import { WhatsAppIcon, FacebookIcon, TikTokIcon, LinkedInIcon } from './SocialIcons';
+import { AnimatedReveal } from './AnimatedReveal';
 
 interface ContactInfoSectionProps {
   onOpenContactModal?: () => void;
@@ -30,34 +31,37 @@ export const ContactInfoSection: React.FC<ContactInfoSectionProps> = ({ onOpenCo
   return (
     <section id="contact-info" className="relative py-20 sm:py-28 bg-black border-t border-white/[0.06] overflow-hidden">
       
-      {/* Background Subtle Ambient Lighting */}
-      <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-gold-500/5 blur-[160px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-emerald-500/5 blur-[140px] rounded-full pointer-events-none" />
+      {/* Background Subtle Ambient Lighting with floating pulse */}
+      <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-gold-500/5 blur-[160px] rounded-full pointer-events-none animate-pulse-aura" />
+      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-emerald-500/5 blur-[140px] rounded-full pointer-events-none animate-float-drift" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-dark-950 border border-gold-500/30 text-gold-300 text-xs font-semibold tracking-wider uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-gold-400" />
-            <span>DIRECT COMMUNICATION & COORDINATES</span>
+        <AnimatedReveal direction="up" delay={50}>
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-dark-950 border border-gold-500/30 text-gold-300 text-xs font-semibold tracking-wider uppercase hover:scale-105 transition-transform">
+              <Sparkles className="w-3.5 h-3.5 text-gold-400 animate-pulse" />
+              <span>DIRECT COMMUNICATION & COORDINATES</span>
+            </div>
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
+              Let’s Connect & Discuss{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-200 via-gold-400 to-gold-500">
+                Your Next Project.
+              </span>
+            </h2>
+            <p className="text-sm sm:text-base text-zinc-400 font-normal leading-relaxed">
+              Reach out through direct email, instant WhatsApp chat, or the verified message form below. Every inquiry receives immediate engineering attention.
+            </p>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
-            Let’s Connect & Discuss{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-200 via-gold-400 to-gold-500">
-              Your Next Project.
-            </span>
-          </h2>
-          <p className="text-sm sm:text-base text-zinc-400 font-normal leading-relaxed">
-            Reach out through direct email, instant WhatsApp chat, or the verified message form below. Every inquiry receives immediate engineering attention.
-          </p>
-        </div>
+        </AnimatedReveal>
 
         {/* 2-Column Grid: Coordinates on Left, Real Email Box on Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Left Column: Coordinates & Direct Action Cards (5 cols) */}
           <div className="lg:col-span-5 space-y-5">
+            <AnimatedReveal direction="left" delay={120}>
             
             {/* Direct Email Card with 1-Click Copy */}
             <div className="p-6 rounded-3xl bg-gradient-to-b from-dark-900/95 to-dark-950 border border-white/[0.08] hover:border-gold-500/40 transition-all duration-300 shadow-xl group">
@@ -203,18 +207,20 @@ export const ContactInfoSection: React.FC<ContactInfoSectionProps> = ({ onOpenCo
 
               </div>
             </div>
+          </AnimatedReveal>
+        </div>
 
-          </div>
-
-          {/* Right Column: Embedded Real Working Email Box (7 cols) */}
-          <div className="lg:col-span-7">
+        {/* Right Column: Embedded Real Working Email Box (7 cols) */}
+        <div className="lg:col-span-7">
+          <AnimatedReveal direction="right" delay={200}>
             <RealEmailBox
               recipientEmail={emailAddress}
               defaultSubject="Software Engineering / AI Project Inquiry"
             />
-          </div>
-
+          </AnimatedReveal>
         </div>
+
+      </div>
 
       </div>
     </section>

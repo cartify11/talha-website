@@ -12,9 +12,9 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects, onWorkTogether })
   return (
     <section id="home" className="relative pt-24 pb-6 sm:pt-28 sm:pb-8 lg:pt-32 lg:pb-10 flex flex-col justify-center overflow-hidden">
       
-      {/* Background Subtle Ambient Lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gold-500/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute top-1/3 right-10 w-[450px] h-[450px] bg-gold-400/5 blur-[100px] rounded-full pointer-events-none" />
+      {/* Background Subtle Ambient Lighting with slow floating pulse */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gold-500/5 blur-[120px] rounded-full pointer-events-none animate-pulse-aura" />
+      <div className="absolute top-1/3 right-10 w-[450px] h-[450px] bg-gold-400/5 blur-[100px] rounded-full pointer-events-none animate-float-drift" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
@@ -23,14 +23,14 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects, onWorkTogether })
           <div className="lg:col-span-7 flex flex-col justify-center space-y-5 sm:space-y-6 text-left">
             
             {/* Eyebrow Pill */}
-            <div className="inline-flex items-center">
+            <div className="inline-flex items-center animate-hero-eyebrow">
               <span className="text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-gold-400">
                 AI ENGINEER & SOFTWARE DEVELOPMENT
               </span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-[1.08]">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-[1.08] animate-hero-heading">
               Building Intelligent{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-gold-300">
                 Digital Experiences.
@@ -38,16 +38,16 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects, onWorkTogether })
             </h1>
 
             {/* Supporting Bio / Introduction */}
-            <p className="text-base sm:text-lg text-zinc-400 max-w-xl font-normal leading-relaxed">
+            <p className="text-base sm:text-lg text-zinc-400 max-w-xl font-normal leading-relaxed animate-hero-bio">
               I build AI-powered applications, modern websites, mobile apps, and custom software solutions that solve real-world problems.
             </p>
 
             {/* Action Buttons (CTAs) */}
-            <div className="flex flex-wrap items-center gap-3.5 pt-2">
+            <div className="flex flex-wrap items-center gap-3.5 pt-2 animate-hero-cta">
               {/* Primary CTA */}
               <button
                 onClick={onExploreProjects}
-                className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-white hover:bg-gold-100 text-dark-950 font-semibold text-sm transition-all duration-300 shadow-[0_4px_20px_rgba(255,255,255,0.15)] hover:shadow-[0_4px_25px_rgba(198,164,119,0.35)] group"
+                className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-white hover:bg-gold-100 text-dark-950 font-semibold text-sm transition-all duration-300 shadow-[0_4px_20px_rgba(255,255,255,0.15)] hover:shadow-[0_4px_25px_rgba(198,164,119,0.35)] shimmer-button hover:scale-[1.02] active:scale-[0.98] group"
               >
                 <span>Explore My Projects</span>
                 <ArrowRight className="w-4 h-4 text-dark-950 transition-transform duration-200 group-hover:translate-x-1" />
@@ -56,15 +56,14 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects, onWorkTogether })
               {/* Secondary CTA */}
               <button
                 onClick={onWorkTogether}
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-dark-900/80 hover:bg-dark-800 text-zinc-200 hover:text-white font-medium text-sm border border-white/[0.1] hover:border-gold-500/50 transition-all duration-300"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-dark-900/80 hover:bg-dark-800 text-zinc-200 hover:text-white font-medium text-sm border border-white/[0.1] hover:border-gold-500/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-sm hover:shadow-[0_0_20px_rgba(198,164,119,0.15)]"
               >
                 <span>Let's Work Together</span>
               </button>
             </div>
 
             {/* Social Links Bar */}
-            {/* Social Channels & Instant WhatsApp Connect (Number encoded behind the scenes, never exposed as raw text) */}
-            <div className="flex flex-wrap items-center gap-3 pt-2 sm:pt-3">
+            <div className="flex flex-wrap items-center gap-3 pt-2 sm:pt-3 animate-hero-social">
               {/* Direct WhatsApp Action */}
               <a
                 href="https://wa.me/923145873362?text=Hello%20Talha,%20I%20would%20like%20to%20discuss%20a%20project."
@@ -128,8 +127,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects, onWorkTogether })
           </div>
 
           {/* Right Column: Cinematic Portrait Visual */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <CinematicPortrait />
+          <div className="lg:col-span-5 flex justify-center lg:justify-end animate-hero-portrait">
+            <div className="animate-float-slow w-full flex justify-center lg:justify-end">
+              <CinematicPortrait />
+            </div>
           </div>
 
         </div>

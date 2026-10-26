@@ -73,8 +73,8 @@ const AppContent: React.FC = () => {
             />
           )}
 
-          {/* Main Content Area: Multi-Page Routes */}
-          <main className="flex-1">
+          {/* Main Content Area: Multi-Page Routes with Smooth Transition */}
+          <main key={location.pathname} className="flex-1 animate-hero-eyebrow">
             <Routes>
               {/* Public Portfolio Routes */}
               <Route

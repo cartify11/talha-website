@@ -14,6 +14,7 @@ import {
   Video
 } from 'lucide-react';
 import { Skill3DVisual } from './Skill3DVisual';
+import { AnimatedReveal } from './AnimatedReveal';
 
 const titleToSkillId: { [key: string]: string } = {
   'AI Software': 'ai-software-developer',
@@ -276,60 +277,65 @@ export const SkillsPreview: React.FC = () => {
       </div>
 
       {/* Volumetric Ambient Glow Orbs */}
-      <div className="absolute top-1/3 left-[-10%] w-[500px] h-[500px] bg-gold-500/10 blur-[150px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-10 right-[-10%] w-[450px] h-[450px] bg-cyan-500/5 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/3 left-[-10%] w-[500px] h-[500px] bg-gold-500/10 blur-[150px] rounded-full pointer-events-none animate-pulse-aura" />
+      <div className="absolute bottom-10 right-[-10%] w-[450px] h-[450px] bg-cyan-500/5 blur-[140px] rounded-full pointer-events-none animate-float-drift" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div className="space-y-3">
-            <div className="inline-flex items-center">
-              <span className="text-xs font-semibold tracking-[0.25em] uppercase text-gold-400">
-                CORE CAPABILITIES
-              </span>
+        {/* Section Header with Scroll Reveal */}
+        <AnimatedReveal direction="up" delay={50}>
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div className="space-y-3">
+              <div className="inline-flex items-center">
+                <span className="text-xs font-semibold tracking-[0.25em] uppercase text-gold-400">
+                  CORE CAPABILITIES
+                </span>
+              </div>
+              <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
+                Talha's Professional Skills
+              </h2>
             </div>
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
-              Talha's Professional Skills
-            </h2>
+            <p className="text-sm sm:text-base text-zinc-400 max-w-md font-normal leading-relaxed">
+              Delivering robust engineering across AI systems, intelligent web applications, mobile platforms, management software, extensions, and e-commerce stores.
+            </p>
           </div>
-          <p className="text-sm sm:text-base text-zinc-400 max-w-md font-normal leading-relaxed">
-            Delivering robust engineering across AI systems, intelligent web applications, mobile platforms, management software, extensions, and e-commerce stores.
-          </p>
-        </div>
+        </AnimatedReveal>
 
-        {/* 3D Interactive Capabilities Grid */}
+        {/* 3D Interactive Capabilities Grid with Staggered Entrance */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
           {capabilities.map((item, index) => {
             const isSpecialAI = item.title === 'AI Software' || item.title === 'AI Software Development' || item.title === 'AI Software Developer';
 
             return (
-              <PreviewSkill3DCard
-                key={index}
-                item={item}
-                isSpecialAI={isSpecialAI}
-                onClick={() => {
-                  navigate('/skills');
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-              />
+              <AnimatedReveal key={index} direction="up" delay={index * 75} distance={24}>
+                <PreviewSkill3DCard
+                  item={item}
+                  isSpecialAI={isSpecialAI}
+                  onClick={() => {
+                    navigate('/skills');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                />
+              </AnimatedReveal>
             );
           })}
         </div>
 
         {/* View All Skills Link */}
-        <div className="mt-12 text-center">
-          <button
-            onClick={() => {
-              navigate('/skills');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-dark-900/90 hover:bg-dark-850 border border-gold-500/30 hover:border-gold-400 text-xs font-semibold text-white transition-all shadow-[0_10px_25px_rgba(0,0,0,0.8),0_0_20px_rgba(198,164,119,0.15)] group"
-          >
-            <span>View Complete Skills Page</span>
-            <ArrowRight className="w-4 h-4 text-gold-400 group-hover:translate-x-1 transition-transform" />
-          </button>
-        </div>
+        <AnimatedReveal direction="up" delay={300}>
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => {
+                navigate('/skills');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-dark-900/90 hover:bg-dark-850 border border-gold-500/30 hover:border-gold-400 text-xs font-semibold text-white transition-all shadow-[0_10px_25px_rgba(0,0,0,0.8),0_0_20px_rgba(198,164,119,0.15)] shimmer-button hover:scale-105 active:scale-95 group"
+            >
+              <span>View Complete Skills Page</span>
+              <ArrowRight className="w-4 h-4 text-gold-400 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
+        </AnimatedReveal>
 
       </div>
     </section>
