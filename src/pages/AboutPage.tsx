@@ -33,11 +33,11 @@ export const AboutPage: React.FC = () => {
   ];
 
   return (
-    <div className="pt-28 pb-20 min-h-screen bg-black text-neutral-100">
+    <div className="pt-28 pb-20 min-h-screen bg-[#07090E] text-white">
       
-      {/* Background Lighting */}
+      {/* Background Lighting with Vibrant Luminous Depth */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-20 right-1/4 w-[600px] h-[500px] bg-gold-500/5 blur-[140px] rounded-full" />
+        <div className="absolute top-20 right-1/4 w-[650px] h-[550px] bg-gradient-to-r from-gold-500/18 via-amber-400/12 to-sky-500/10 blur-[150px] rounded-full" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -50,41 +50,41 @@ export const AboutPage: React.FC = () => {
             
             <div className="space-y-3">
               <div className="inline-flex items-center">
-                <span className="text-xs font-semibold tracking-[0.25em] uppercase text-gold-400">
+                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/15 border border-gold-400/40 text-xs font-bold tracking-[0.25em] uppercase text-gold-300 shadow-[0_0_15px_rgba(245,158,11,0.25)]">
                   ABOUT ME
                 </span>
               </div>
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
                 Turning Ideas Into{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-gold-300">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gold-200 to-amber-300 drop-shadow-[0_0_30px_rgba(245,158,11,0.35)]">
                   Digital Experiences
                 </span>
               </h1>
             </div>
 
             {/* Narrative */}
-            <div className="space-y-4 text-zinc-300 text-sm sm:text-base leading-relaxed">
+            <div className="space-y-4 text-zinc-200 text-sm sm:text-base leading-relaxed">
               <p>
                 I am a passionate software engineer and AI developer with deep expertise in crafting robust, user-centric web applications, intelligent agents, and scalable enterprise platforms. I thrive on translating abstract technical complexity into elegant, reliable software products.
               </p>
-              <p className="text-zinc-400">
+              <p className="text-zinc-300">
                 Over the past 2+ years, I have architected and deployed modern digital solutions spanning generative AI retrieval systems, real-time multiplayer SaaS suites, cross-platform mobile apps, and high-throughput enterprise management portals. My work centers on writing clean, maintainable code backed by rigorous testing.
               </p>
             </div>
 
             {/* Quick Stats Grid */}
-            <div className="grid grid-cols-3 gap-4 p-5 rounded-2xl bg-dark-900/80 border border-white/[0.06]">
+            <div className="grid grid-cols-3 gap-4 p-5 rounded-2xl bg-[#121926]/90 border border-white/12 shadow-xl">
               <div>
-                <div className="font-heading text-2xl sm:text-3xl font-bold text-white">2+</div>
-                <div className="text-[11px] text-zinc-400 font-medium uppercase tracking-wider mt-1">Years Exp.</div>
+                <div className="font-heading text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-gold-200 to-amber-300">2+</div>
+                <div className="text-[11px] text-zinc-300 font-semibold uppercase tracking-wider mt-1">Years Exp.</div>
               </div>
-              <div className="border-l border-white/[0.06] pl-4">
-                <div className="font-heading text-2xl sm:text-3xl font-bold text-white">20+</div>
-                <div className="text-[11px] text-zinc-400 font-medium uppercase tracking-wider mt-1">Projects Built</div>
+              <div className="border-l border-white/10 pl-4">
+                <div className="font-heading text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-gold-200 to-amber-300">20+</div>
+                <div className="text-[11px] text-zinc-300 font-semibold uppercase tracking-wider mt-1">Projects Built</div>
               </div>
-              <div className="border-l border-white/[0.06] pl-4">
-                <div className="font-heading text-2xl sm:text-3xl font-bold text-white">20+</div>
-                <div className="text-[11px] text-zinc-400 font-medium uppercase tracking-wider mt-1">Happy Clients</div>
+              <div className="border-l border-white/10 pl-4">
+                <div className="font-heading text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-gold-200 to-amber-300">20+</div>
+                <div className="text-[11px] text-zinc-300 font-semibold uppercase tracking-wider mt-1">Happy Clients</div>
               </div>
             </div>
 
@@ -139,15 +139,15 @@ export const AboutPage: React.FC = () => {
             </div>
 
             {/* Education Highlight Card */}
-            <div className="w-full mt-10 rounded-2xl p-6 bg-gradient-to-b from-dark-900/90 to-dark-950 border border-white/[0.07] space-y-4 shadow-xl">
+            <div className="w-full mt-10 rounded-3xl p-6 bg-gradient-to-b from-[#141C2B]/95 to-[#0E1522] border border-white/12 hover:border-gold-400/50 space-y-4 shadow-xl">
               <div className="flex items-center gap-3 text-gold-400">
-                <GraduationCap className="w-5 h-5" />
+                <GraduationCap className="w-5 h-5 text-gold-400" />
                 <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-white">
                   Academic Background
                 </h4>
               </div>
 
-              <div className="space-y-3 text-xs text-zinc-300">
+              <div className="space-y-3 text-xs text-zinc-200">
                 <div className="pb-3 border-b border-white/[0.05]">
                   <div className="flex justify-between font-semibold text-white">
                     <span>BS in Computer Science</span>

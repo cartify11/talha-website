@@ -98,26 +98,26 @@ const PreviewSkill3DCard: React.FC<{
           transformStyle: 'preserve-3d',
           transition: isHovered ? 'transform 0.12s cubic-bezier(0.2, 0, 0, 1)' : 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
           boxShadow: isHovered
-            ? `${-tilt.y * 3}px ${tilt.x * 3 + 28}px 55px rgba(0, 0, 0, 0.95), 0 0 35px rgba(198, 164, 119, ${isSpecialAI ? '0.38' : '0.24'})`
-            : '0 16px 38px rgba(0, 0, 0, 0.8), 0 0 20px rgba(198, 164, 119, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.09)',
+            ? `${-tilt.y * 3}px ${tilt.x * 3 + 28}px 55px rgba(0, 0, 0, 0.95), 0 0 35px rgba(245, 158, 11, ${isSpecialAI ? '0.45' : '0.3'})`
+            : '0 16px 38px rgba(0, 0, 0, 0.8), 0 0 20px rgba(245, 158, 11, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.12)',
         }}
-        className={`group relative rounded-3xl p-7 bg-gradient-to-b from-[#161822]/95 via-[#0e1017]/95 to-[#06070a] border ${
+        className={`group relative rounded-3xl p-7 bg-gradient-to-b from-[#162032]/95 via-[#101724]/95 to-[#0A0E17] border ${
           isSpecialAI
             ? isHovered
-              ? 'border-gold-400'
-              : 'border-gold-500/50 shadow-[0_0_25px_rgba(198,164,119,0.25)]'
+              ? 'border-gold-400 shadow-[0_0_35px_rgba(245,158,11,0.4)]'
+              : 'border-gold-400/60 shadow-[0_0_25px_rgba(245,158,11,0.25)]'
             : isHovered
-              ? 'border-gold-400/80'
-              : 'border-gold-500/20'
+              ? 'border-gold-400'
+              : 'border-white/12 hover:border-gold-400/50'
         } flex flex-col justify-between overflow-hidden h-full`}
       >
         {/* Dynamic Specular Light Glare Sheen */}
         {isHovered && (
           <div
-            className="absolute inset-0 pointer-events-none opacity-45 transition-opacity duration-300 rounded-3xl"
+            className="absolute inset-0 pointer-events-none opacity-50 transition-opacity duration-300 rounded-3xl"
             style={{
               transform: 'translateZ(1px)',
-              background: `radial-gradient(circle at ${tilt.glowX}% ${tilt.glowY}%, rgba(255, 255, 255, 0.22) 0%, rgba(198, 164, 119, 0.25) 28%, transparent 65%)`,
+              background: `radial-gradient(circle at ${tilt.glowX}% ${tilt.glowY}%, rgba(255, 255, 255, 0.28) 0%, rgba(245, 158, 11, 0.3) 28%, transparent 65%)`,
             }}
           />
         )}
@@ -131,7 +131,7 @@ const PreviewSkill3DCard: React.FC<{
               transformStyle: 'preserve-3d',
               transition: 'transform 0.3s ease-out, box-shadow 0.3s ease-out',
               boxShadow: isHovered 
-                ? '0 20px 40px -10px rgba(0,0,0,0.9), 0 0 25px rgba(198,164,119,0.2)' 
+                ? '0 20px 40px -10px rgba(0,0,0,0.9), 0 0 25px rgba(245,158,11,0.25)' 
                 : '0 10px 25px rgba(0,0,0,0.6)',
             }}
           >
@@ -147,7 +147,7 @@ const PreviewSkill3DCard: React.FC<{
                 transition: 'transform 0.3s ease-out',
               }}
             >
-              <span className="text-[10px] font-bold tracking-widest uppercase text-gold-300 bg-black/90 border border-gold-400/60 px-3 py-1 rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.9)] backdrop-blur-md flex items-center gap-1.5 ring-1 ring-gold-400/20">
+              <span className="text-[10px] font-bold tracking-widest uppercase text-gold-300 bg-[#07090E]/90 border border-gold-400/60 px-3.5 py-1 rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.9)] backdrop-blur-md flex items-center gap-1.5 ring-1 ring-gold-400/25">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
                 {item.category}
               </span>
@@ -161,14 +161,12 @@ const PreviewSkill3DCard: React.FC<{
               transition: 'transform 0.3s ease-out',
             }}
           >
-            <h3 className={`font-heading text-xl font-bold transition-colors mb-2.5 ${
-              isSpecialAI ? 'text-white group-hover:text-gold-300' : 'text-white group-hover:text-gold-200'
-            }`}>
+            <h3 className="font-heading text-xl font-bold transition-colors mb-2.5 text-white group-hover:text-gold-300">
               {item.title}
             </h3>
 
             {/* Description */}
-            <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-zinc-200 leading-relaxed font-normal">
               {item.description}
             </p>
           </div>
@@ -176,19 +174,19 @@ const PreviewSkill3DCard: React.FC<{
 
         {/* Bottom link with 3D Elevation */}
         <div 
-          className="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between"
+          className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between"
           style={{
             transform: `translateZ(${isHovered ? '28px' : '0px'})`,
             transition: 'transform 0.3s ease-out',
           }}
         >
-          <span className={`text-xs font-semibold transition-colors flex items-center gap-1.5 ${
-            isSpecialAI ? 'text-gold-300 group-hover:text-gold-200' : 'text-zinc-400 group-hover:text-gold-300'
+          <span className={`text-xs font-bold transition-colors flex items-center gap-1.5 ${
+            isSpecialAI ? 'text-gold-300 group-hover:text-gold-200' : 'text-gold-400 group-hover:text-white'
           }`}>
             <span>Explore Skills Details</span>
           </span>
-          <div className="w-8 h-8 rounded-full bg-white/[0.03] group-hover:bg-gold-500/20 border border-white/[0.08] group-hover:border-gold-500/50 flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-            <ArrowUpRight className="w-4 h-4 text-zinc-400 group-hover:text-gold-300 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          <div className="w-8 h-8 rounded-full bg-white/[0.05] group-hover:bg-gold-500/25 border border-white/15 group-hover:border-gold-400/60 flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-sm">
+            <ArrowUpRight className="w-4 h-4 text-zinc-300 group-hover:text-gold-300 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </div>
         </div>
       </div>

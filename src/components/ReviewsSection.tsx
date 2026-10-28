@@ -182,41 +182,41 @@ export const ReviewsSection: React.FC = () => {
           {filteredReviews.map((review, index) => (
             <AnimatedReveal key={review.id} direction="up" delay={index * 80} distance={24}>
               <div
-                className="p-6 sm:p-7 rounded-3xl bg-gradient-to-b from-dark-900/90 via-dark-900 to-dark-950 border border-white/[0.08] hover:border-gold-500/40 transition-all duration-500 shadow-[0_15px_35px_rgba(0,0,0,0.8)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.9),0_0_20px_rgba(198,164,119,0.15)] flex flex-col justify-between space-y-6 group h-full hover:-translate-y-1"
+                className="p-6 sm:p-7 rounded-3xl bg-gradient-to-b from-[#141C2B]/95 via-[#0E1522]/95 to-[#0A0E17] border border-white/12 hover:border-gold-400/60 transition-all duration-500 shadow-[0_20px_45px_rgba(0,0,0,0.85)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.9),0_0_25px_rgba(245,158,11,0.2)] flex flex-col justify-between space-y-6 group h-full hover:-translate-y-1"
               >
                 <div className="space-y-4">
                   {/* Header: Stars & Project Tag */}
-                  <div className="flex items-center justify-between gap-2 border-b border-white/[0.06] pb-3">
-                    <div className="flex items-center gap-1 text-gold-400">
+                  <div className="flex items-center justify-between gap-2 border-b border-white/10 pb-3">
+                    <div className="flex items-center gap-1 text-amber-400">
                       {[...Array(review.rating)].map((_, i) => (
-                        <Star key={i} className="w-3.5 h-3.5 fill-gold-400" />
+                        <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                       ))}
                     </div>
-                    <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-gold-500/10 text-gold-300 border border-gold-500/30">
+                    <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-gold-500/15 text-gold-300 border border-gold-400/40">
                       {review.category}
                     </span>
                   </div>
 
                   {/* Project Delivered */}
                   <div>
-                    <span className="text-[11px] font-mono text-zinc-500 uppercase tracking-wider block">
+                    <span className="text-[11px] font-mono text-gold-400/90 uppercase tracking-wider block font-semibold">
                       Delivered Solution
                     </span>
-                    <span className="text-xs font-semibold text-zinc-200 mt-0.5 block line-clamp-1">
+                    <span className="text-xs font-bold text-white mt-0.5 block line-clamp-1">
                       {review.projectDelivered}
                     </span>
                   </div>
 
                   {/* Feedback Quote */}
-                  <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed italic">
+                  <p className="text-xs sm:text-sm text-zinc-100 leading-relaxed font-normal italic">
                     "{review.feedback}"
                   </p>
                 </div>
 
                 {/* Client Info Footer */}
-                <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between gap-3">
+                <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3 min-w-0">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold-500/20 to-dark-800 border border-gold-400/30 flex items-center justify-center text-gold-300 font-bold text-xs font-heading shrink-0 shadow-sm group-hover:scale-110 transition-transform">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold-500/25 to-[#162030] border border-gold-400/50 flex items-center justify-center text-gold-300 font-bold text-xs font-heading shrink-0 shadow-sm group-hover:scale-110 transition-transform">
                       {review.avatarInitials}
                     </div>
                     <div className="min-w-0">
@@ -228,7 +228,7 @@ export const ReviewsSection: React.FC = () => {
                           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" title="Verified Client" />
                         )}
                       </div>
-                      <span className="text-[11px] text-zinc-400 truncate block">
+                      <span className="text-[11px] text-zinc-300 font-medium truncate block">
                         {review.role} • {review.company}
                       </span>
                     </div>

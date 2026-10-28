@@ -55,12 +55,18 @@ const AppContent: React.FC = () => {
         />
       )}
 
-      <div className="min-h-screen bg-black text-neutral-100 selection:bg-gold-500/30 selection:text-gold-200 flex flex-col relative">
+      <div className="min-h-screen bg-[#07090E] text-white selection:bg-gold-500/30 selection:text-gold-200 flex flex-col relative">
         
-        {/* Cinematic Ambient Atmosphere Overlays */}
+        {/* Cinematic Ambient Atmosphere Overlays with Bright Professional Depth */}
         <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gold-500/[0.04] blur-[150px] rounded-full" />
-          <div className="absolute bottom-0 inset-x-0 h-96 bg-gradient-to-t from-black via-black/50 to-transparent" />
+          {/* Luminous Top Golden Ambient Sunburst */}
+          <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[1100px] h-[600px] bg-gradient-to-b from-gold-500/15 via-amber-400/10 to-transparent blur-[140px] rounded-full pointer-events-none" />
+          {/* Subtle Electric Indigo/Cyan Ambient Accent on the right */}
+          <div className="absolute top-1/3 -right-40 w-[600px] h-[600px] bg-sky-500/10 blur-[150px] rounded-full pointer-events-none" />
+          {/* Emerald/Teal Depth on the bottom left */}
+          <div className="absolute bottom-20 -left-32 w-[550px] h-[550px] bg-emerald-500/10 blur-[150px] rounded-full pointer-events-none" />
+          {/* Smooth Bottom Vignette */}
+          <div className="absolute bottom-0 inset-x-0 h-96 bg-gradient-to-t from-[#07090E] via-[#07090E]/40 to-transparent pointer-events-none" />
         </div>
 
         <div className="relative z-10 flex flex-col min-h-screen">

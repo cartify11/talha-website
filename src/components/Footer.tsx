@@ -31,27 +31,27 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="relative bg-black border-t border-white/[0.08] pt-16 pb-12 overflow-hidden">
+    <footer className="relative bg-[#07090E] border-t border-white/10 pt-16 pb-12 overflow-hidden">
       
-      {/* Subtle Background Glow Accents */}
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gold-500/[0.03] blur-[150px] pointer-events-none rounded-full" />
-      <div className="absolute top-0 right-1/4 w-80 h-80 bg-gold-400/[0.02] blur-[120px] pointer-events-none rounded-full" />
+      {/* Vibrant Background Glow Accents */}
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gold-500/10 blur-[150px] pointer-events-none rounded-full" />
+      <div className="absolute top-0 right-1/4 w-80 h-80 bg-sky-500/10 blur-[140px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Pre-Footer Action Banner */}
-        <div className="mb-14 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-dark-900/90 via-dark-850 to-dark-900/90 border border-white/[0.08] shadow-[0_10px_40px_rgba(0,0,0,0.6)] flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-full bg-gold-500/5 blur-3xl pointer-events-none" />
+        <div className="mb-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#141C2B]/95 via-[#0E1522] to-[#141C2B]/95 border border-white/12 shadow-[0_15px_45px_rgba(0,0,0,0.85)] flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-full bg-gold-500/10 blur-3xl pointer-events-none" />
           
           <div className="space-y-1.5 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/25 text-gold-300 text-xs font-mono uppercase tracking-wider mb-1">
-              <Sparkles className="w-3.5 h-3.5 text-gold-400" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/15 border border-gold-400/40 text-gold-300 text-xs font-mono font-bold uppercase tracking-wider mb-1">
+              <Sparkles className="w-3.5 h-3.5 text-gold-400 animate-pulse" />
               <span>Have a project in mind?</span>
             </div>
             <h3 className="font-heading text-xl sm:text-2xl font-bold text-white">
               Let's build something exceptional together.
             </h3>
-            <p className="text-xs sm:text-sm text-zinc-400 max-w-xl">
+            <p className="text-xs sm:text-sm text-zinc-200 max-w-xl font-normal">
               Available for full-stack engineering, custom SaaS systems, and production AI integrations.
             </p>
           </div>
@@ -59,7 +59,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-wrap items-center gap-3">
             <button
               onClick={() => handleNavClick('/contact')}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gold-500 hover:bg-gold-400 text-dark-950 font-bold text-xs transition-all shadow-[0_4px_20px_rgba(198,164,119,0.3)] hover:scale-105"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-gold-400 to-amber-500 hover:from-gold-300 hover:to-amber-400 text-dark-950 font-bold text-xs transition-all shadow-[0_4px_25px_rgba(245,158,11,0.45)] hover:scale-105"
             >
               <span>Start A Project</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
               href="https://wa.me/923145873362?text=Hello%20Talha,%20I%20would%20like%20to%20discuss%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 hover:text-emerald-300 border border-emerald-500/30 text-xs font-semibold transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-emerald-500/15 hover:bg-emerald-500/30 text-emerald-300 hover:text-white border border-emerald-400/40 text-xs font-bold transition-all hover:scale-105 shadow-[0_0_15px_rgba(16,185,129,0.25)]"
             >
               <WhatsAppIcon className="w-3.5 h-3.5" />
               <span>WhatsApp Chat</span>

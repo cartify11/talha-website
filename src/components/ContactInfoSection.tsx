@@ -29,28 +29,28 @@ export const ContactInfoSection: React.FC<ContactInfoSectionProps> = ({ onOpenCo
   };
 
   return (
-    <section id="contact-info" className="relative py-20 sm:py-28 bg-black border-t border-white/[0.06] overflow-hidden">
+    <section id="contact-info" className="relative py-20 sm:py-28 bg-[#07090E] border-t border-white/10 overflow-hidden">
       
-      {/* Background Subtle Ambient Lighting with floating pulse */}
-      <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-gold-500/5 blur-[160px] rounded-full pointer-events-none animate-pulse-aura" />
-      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-emerald-500/5 blur-[140px] rounded-full pointer-events-none animate-float-drift" />
+      {/* Background Vibrant Ambient Lighting with floating pulse */}
+      <div className="absolute top-1/3 right-1/4 w-[550px] h-[550px] bg-gradient-to-r from-gold-500/15 via-amber-400/10 to-transparent blur-[160px] rounded-full pointer-events-none animate-pulse-aura" />
+      <div className="absolute bottom-10 left-10 w-[450px] h-[450px] bg-sky-500/10 blur-[150px] rounded-full pointer-events-none animate-float-drift" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <AnimatedReveal direction="up" delay={50}>
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-dark-950 border border-gold-500/30 text-gold-300 text-xs font-semibold tracking-wider uppercase hover:scale-105 transition-transform">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0D121C] border border-gold-400/40 text-gold-300 text-xs font-bold tracking-wider uppercase hover:scale-105 transition-transform shadow-[0_0_15px_rgba(245,158,11,0.2)]">
               <Sparkles className="w-3.5 h-3.5 text-gold-400 animate-pulse" />
               <span>DIRECT COMMUNICATION & COORDINATES</span>
             </div>
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
               Let’s Connect & Discuss{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-200 via-gold-400 to-gold-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gold-200 to-amber-300 drop-shadow-[0_0_30px_rgba(245,158,11,0.35)]">
                 Your Next Project.
               </span>
             </h2>
-            <p className="text-sm sm:text-base text-zinc-400 font-normal leading-relaxed">
+            <p className="text-sm sm:text-base text-zinc-200 font-normal leading-relaxed">
               Reach out through direct email, instant WhatsApp chat, or the verified message form below. Every inquiry receives immediate engineering attention.
             </p>
           </div>
@@ -64,7 +64,7 @@ export const ContactInfoSection: React.FC<ContactInfoSectionProps> = ({ onOpenCo
             <AnimatedReveal direction="left" delay={120}>
             
             {/* Direct Email Card with 1-Click Copy */}
-            <div className="p-6 rounded-3xl bg-gradient-to-b from-dark-900/95 to-dark-950 border border-white/[0.08] hover:border-gold-500/40 transition-all duration-300 shadow-xl group">
+            <div className="p-6 rounded-3xl bg-gradient-to-b from-[#141C2B]/95 to-[#0E1522] border border-white/12 hover:border-gold-400/60 transition-all duration-300 shadow-xl group hover:shadow-[0_15px_35px_rgba(0,0,0,0.85),0_0_20px_rgba(245,158,11,0.2)]">
               <div className="flex items-start justify-between gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-gold-500/10 border border-gold-400/25 flex items-center justify-center text-gold-400 shrink-0 group-hover:scale-105 transition-transform">
                   <Mail className="w-6 h-6" />

@@ -93,45 +93,45 @@ export const ProjectsPreview: React.FC = () => {
             {filteredProjects.map((project, index) => (
               <AnimatedReveal key={project.id} direction="up" delay={index * 120} distance={28}>
                 <div
-                  className="group rounded-2xl overflow-hidden bg-gradient-to-b from-dark-850/80 to-dark-950 border border-white/[0.07] hover:border-gold-500/40 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.9),0_0_25px_rgba(198,164,119,0.18)] flex flex-col h-full"
+                  className="group rounded-3xl overflow-hidden bg-gradient-to-b from-[#141C2B]/95 via-[#0E1522]/95 to-[#0A0E17] border border-white/12 hover:border-gold-400/60 transition-all duration-500 hover:shadow-[0_25px_50px_rgba(0,0,0,0.85),0_0_30px_rgba(245,158,11,0.25)] flex flex-col h-full hover:-translate-y-1"
                 >
-                {/* Project Visual / Dark Presentation Surface */}
+                {/* Project Visual / High-Clarity Edge-to-Edge Flush Preview */}
                 <div 
                   onClick={() => setSelectedProject(project)}
-                  className="relative aspect-[16/10] bg-dark-950/90 overflow-hidden flex items-center justify-center p-6 border-b border-white/[0.05] group-hover:bg-dark-900/40 transition-colors cursor-pointer"
+                  className="relative aspect-[16/10] w-full bg-[#0D121C] overflow-hidden border-b border-white/10 group-hover:bg-[#121926] transition-colors cursor-pointer"
                   title="Click to launch Cinematic Project Showcase"
                 >
                 
                 {/* Subtle Grid Pattern */}
                 <div 
-                  className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+                  className="absolute inset-0 opacity-[0.06] pointer-events-none" 
                   style={{
-                    backgroundImage: `radial-gradient(circle at 1px 1px, #C6A477 1px, transparent 0)`,
+                    backgroundImage: `radial-gradient(circle at 1px 1px, #F59E0B 1px, transparent 0)`,
                     backgroundSize: '24px 24px',
                   }}
                 />
 
                 {/* Real Preview Image or Device Mockup Card */}
                 {project.previewImage ? (
-                  <div className="relative w-full h-full rounded-xl overflow-hidden border border-white/[0.1] shadow-2xl group-hover:scale-[1.02] transition-transform duration-500">
+                  <div className="relative w-full h-full overflow-hidden">
                     <img
                       src={project.previewImage}
                       alt={project.name || project.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E17]/90 via-transparent to-transparent pointer-events-none" />
                   </div>
                 ) : (
-                  <div className="relative w-full h-full rounded-xl bg-dark-900/95 border border-white/[0.1] shadow-2xl p-4 flex flex-col justify-between overflow-hidden group-hover:scale-[1.02] transition-transform duration-500">
+                  <div className="relative w-full h-full bg-[#0E1420] p-5 flex flex-col justify-between overflow-hidden">
                     
                     {/* Mockup Window Header */}
-                    <div className="flex items-center justify-between pb-3 border-b border-white/[0.06]">
+                    <div className="flex items-center justify-between pb-3 border-b border-white/10">
                       <div className="flex items-center gap-1.5">
-                        <div className="w-2.5 h-2.5 rounded-full bg-red-500/40" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-amber-500/40" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/40" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
                       </div>
-                      <div className="px-3 py-0.5 rounded-md bg-dark-950 text-[10px] font-mono text-zinc-500 border border-white/[0.05]">
+                      <div className="px-3 py-0.5 rounded-md bg-[#07090E] text-[11px] font-mono text-zinc-300 border border-white/10">
                         {project.slug}.talha.dev
                       </div>
                       <span className="w-3" />
@@ -140,44 +140,45 @@ export const ProjectsPreview: React.FC = () => {
                     {/* Mockup Dynamic Content Wireframe */}
                     <div className="py-4 flex-1 flex flex-col justify-center gap-3">
                       <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-lg bg-gold-500/15 border border-gold-400/30 flex items-center justify-center">
-                          <Code2 className="w-4 h-4 text-gold-300" />
+                        <div className="w-10 h-10 rounded-xl bg-gold-500/20 border border-gold-400/40 flex items-center justify-center">
+                          <Code2 className="w-5 h-5 text-gold-300" />
                         </div>
                         <div>
-                          <div className="h-3 w-32 bg-white/20 rounded" />
-                          <div className="h-2 w-20 bg-white/10 rounded mt-1.5" />
+                          <div className="h-3.5 w-36 bg-white/30 rounded" />
+                          <div className="h-2 w-24 bg-white/15 rounded mt-2" />
                         </div>
                       </div>
 
                       <div className="grid grid-cols-3 gap-2 mt-2">
-                        <div className="h-16 rounded-lg bg-dark-800/80 border border-white/[0.04] p-2 flex flex-col justify-between">
-                          <div className="h-1.5 w-10 bg-gold-400/40 rounded" />
-                          <div className="h-3 w-14 bg-white/20 rounded" />
+                        <div className="h-16 rounded-xl bg-[#162030] border border-white/10 p-2.5 flex flex-col justify-between">
+                          <div className="h-1.5 w-10 bg-gold-400/60 rounded" />
+                          <div className="h-3 w-14 bg-white/30 rounded" />
                         </div>
-                        <div className="h-16 rounded-lg bg-dark-800/80 border border-white/[0.04] p-2 flex flex-col justify-between">
-                          <div className="h-1.5 w-8 bg-zinc-500/40 rounded" />
-                          <div className="h-3 w-12 bg-white/20 rounded" />
+                        <div className="h-16 rounded-xl bg-[#162030] border border-white/10 p-2.5 flex flex-col justify-between">
+                          <div className="h-1.5 w-8 bg-sky-400/60 rounded" />
+                          <div className="h-3 w-12 bg-white/30 rounded" />
                         </div>
-                        <div className="h-16 rounded-lg bg-dark-800/80 border border-white/[0.04] p-2 flex flex-col justify-between">
-                          <div className="h-1.5 w-12 bg-emerald-400/40 rounded" />
-                          <div className="h-3 w-10 bg-white/20 rounded" />
+                        <div className="h-16 rounded-xl bg-[#162030] border border-white/10 p-2.5 flex flex-col justify-between">
+                          <div className="h-1.5 w-12 bg-emerald-400/60 rounded" />
+                          <div className="h-3 w-10 bg-white/30 rounded" />
                         </div>
                       </div>
                     </div>
 
                     {/* Mockup Footer */}
-                    <div className="pt-2 border-t border-white/[0.05] flex items-center justify-between text-[10px] text-zinc-500">
+                    <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-zinc-400">
                       <span>Type: {project.type}</span>
-                      <span className="text-gold-400/80 font-mono">
-                        {project.status === 'live' ? 'LIVE' : 'LINK REQUIRED'}
+                      <span className="text-gold-300 font-mono font-bold">
+                        {project.status === 'live' ? '● LIVE IN PRODUCTION' : 'LINK REQUIRED'}
                       </span>
                     </div>
                   </div>
                 )}
 
                 {/* Corner Category Tag */}
-                <div className="absolute top-4 right-4 z-20">
-                  <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-dark-950/90 text-gold-300 border border-gold-500/30 backdrop-blur-md shadow-lg">
+                <div className="absolute top-3.5 right-3.5 z-20">
+                  <span className="px-3.5 py-1 rounded-full text-xs font-bold bg-[#07090E]/90 text-gold-300 border border-gold-400/50 backdrop-blur-md shadow-lg flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
                     {project.tag}
                   </span>
                 </div>
@@ -188,12 +189,12 @@ export const ProjectsPreview: React.FC = () => {
                 <div>
                   <h3 
                     onClick={() => setSelectedProject(project)}
-                    className="font-heading text-xl font-bold text-white group-hover:text-gold-200 transition-colors cursor-pointer"
+                    className="font-heading text-xl sm:text-2xl font-bold text-white group-hover:text-gold-300 transition-colors cursor-pointer"
                     title="Click to launch Cinematic Project Showcase"
                   >
                     {project.title}
                   </h3>
-                  <p className="text-sm text-zinc-400 mt-2.5 line-clamp-2 leading-relaxed">
+                  <p className="text-sm text-zinc-200 mt-2.5 line-clamp-2 leading-relaxed">
                     {project.description}
                   </p>
                 </div>
@@ -203,7 +204,7 @@ export const ProjectsPreview: React.FC = () => {
                   {project.technologies.slice(0, 5).map((tech) => (
                     <span
                       key={tech}
-                      className="px-2.5 py-1 text-[11px] font-mono text-zinc-300 bg-dark-800/90 rounded-md border border-white/[0.06]"
+                      className="px-2.5 py-1 text-xs font-mono font-medium text-zinc-200 bg-[#162030] rounded-lg border border-white/10"
                     >
                       {tech}
                     </span>
@@ -211,27 +212,27 @@ export const ProjectsPreview: React.FC = () => {
                 </div>
 
                 {/* Action Link Row */}
-                <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between gap-3">
+                <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-3">
                   {project.liveUrl ? (
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gold-500/10 hover:bg-gold-500/20 text-gold-300 border border-gold-500/30 text-xs font-semibold transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gold-500/15 hover:bg-gold-500/30 text-gold-300 border border-gold-400/50 text-xs font-bold transition-all shadow-[0_0_15px_rgba(245,158,11,0.2)] hover:scale-105"
                     >
                       <span>{project.accessLabel || 'Open Live Website ↗'}</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   ) : (
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-800/70 text-zinc-400 border border-white/[0.08] text-[11px] font-medium">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80" />
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-zinc-800 text-zinc-300 border border-white/10 text-xs font-medium">
+                      <span className="w-2 h-2 rounded-full bg-amber-400" />
                       <span>Link Required</span>
                     </div>
                   )}
 
                   <button
                     onClick={() => setSelectedProject(project)}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-300 hover:text-white transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-gold-300 hover:text-white transition-colors group-hover:translate-x-0.5"
                   >
                     <Sparkles className="w-3.5 h-3.5 text-gold-400" />
                     <span>Cinematic View</span>

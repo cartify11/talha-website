@@ -41,7 +41,7 @@ const AnimatedStatValue: React.FC<{ value: string; isVisible: boolean }> = ({ va
   }, [isVisible, targetNumber]);
 
   return (
-    <span className="font-heading text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white group-hover:text-gold-300 transition-colors drop-shadow-[0_0_15px_rgba(198,164,119,0.25)]">
+    <span className="font-heading text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-gold-200 to-amber-300 transition-colors drop-shadow-[0_0_20px_rgba(245,158,11,0.35)]">
       {isVisible ? displayValue : 0}{suffix}
     </span>
   );
@@ -59,10 +59,10 @@ export const Stats: React.FC<StatsProps> = ({
   return (
     <section 
       ref={ref}
-      className="relative z-20 border-y border-white/[0.06] bg-black/60 backdrop-blur-md overflow-hidden"
+      className="relative z-20 border-y border-white/10 bg-[#0A0E17]/85 backdrop-blur-md overflow-hidden"
     >
       {/* Subtle ambient light pulse */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-500/[0.03] to-transparent pointer-events-none animate-pulse-aura" />
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-500/10 to-transparent pointer-events-none animate-pulse-aura" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 sm:py-9 relative z-10">
         <div className="flex items-center justify-center">
@@ -82,13 +82,13 @@ export const Stats: React.FC<StatsProps> = ({
                 <div className="flex items-baseline gap-1">
                   <AnimatedStatValue value={stat.value} isVisible={isVisible} />
                 </div>
-                <span className="text-[11px] sm:text-sm text-zinc-400 font-medium mt-1 sm:mt-1.5 transition-colors group-hover:text-zinc-200 leading-tight">
+                <span className="text-[11px] sm:text-sm text-zinc-200 font-semibold mt-1 sm:mt-1.5 transition-colors group-hover:text-white leading-tight">
                   {stat.label}
                 </span>
 
                 {/* Vertical Divider (between items) */}
                 {index < stats.length - 1 && (
-                  <div className="hidden sm:block absolute -right-4 sm:-right-8 md:-right-12 top-1/2 -translate-y-1/2 w-[1px] h-10 bg-white/[0.08]" />
+                  <div className="hidden sm:block absolute -right-4 sm:-right-8 md:-right-12 top-1/2 -translate-y-1/2 w-[1px] h-10 bg-white/10" />
                 )}
               </div>
             ))}
