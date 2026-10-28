@@ -41,7 +41,7 @@ const AnimatedStatValue: React.FC<{ value: string; isVisible: boolean }> = ({ va
   }, [isVisible, targetNumber]);
 
   return (
-    <span className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white group-hover:text-gold-300 transition-colors drop-shadow-[0_0_15px_rgba(198,164,119,0.25)]">
+    <span className="font-heading text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white group-hover:text-gold-300 transition-colors drop-shadow-[0_0_15px_rgba(198,164,119,0.25)]">
       {isVisible ? displayValue : 0}{suffix}
     </span>
   );
@@ -68,7 +68,7 @@ export const Stats: React.FC<StatsProps> = ({
         <div className="flex items-center justify-center">
           
           {/* Stats Metrics Grid */}
-          <div className="grid grid-cols-3 gap-8 sm:gap-16 md:gap-24 w-full max-w-4xl justify-items-center">
+          <div className="grid grid-cols-3 gap-2.5 sm:gap-12 md:gap-20 w-full max-w-4xl justify-items-center">
             {stats.map((stat, index) => (
               <div
                 key={index}
@@ -82,7 +82,7 @@ export const Stats: React.FC<StatsProps> = ({
                 <div className="flex items-baseline gap-1">
                   <AnimatedStatValue value={stat.value} isVisible={isVisible} />
                 </div>
-                <span className="text-xs sm:text-sm text-zinc-400 font-medium mt-1.5 transition-colors group-hover:text-zinc-200">
+                <span className="text-[11px] sm:text-sm text-zinc-400 font-medium mt-1 sm:mt-1.5 transition-colors group-hover:text-zinc-200 leading-tight">
                   {stat.label}
                 </span>
 

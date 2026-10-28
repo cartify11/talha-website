@@ -30,7 +30,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects, onWorkTogether })
             </div>
 
             {/* Main Headline - Fixed words with smooth entrance & luxury gold flow */}
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-[1.08] animate-hero-heading">
+            <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-[1.12] sm:leading-[1.08] animate-hero-heading">
               <span className="block">Building Intelligent</span>
               <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-gold-100 via-gold-400 to-amber-200 bg-[length:200%_auto] animate-text-gradient-flow drop-shadow-[0_0_30px_rgba(198,164,119,0.3)]">
                 Digital Experiences.

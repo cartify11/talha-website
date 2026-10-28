@@ -106,7 +106,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCVModal, onOpenContactModa
           </nav>
 
           {/* Right Action Buttons */}
-          <div className="hidden sm:flex items-center gap-2.5">
+          <div className="hidden lg:flex items-center gap-2.5">
             <button
               onClick={onOpenCVModal}
               className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium text-zinc-200 bg-dark-850/80 hover:bg-dark-800 border border-white/[0.08] hover:border-gold-500/40 rounded-full transition-all duration-300 group hover:shadow-[0_0_20px_rgba(198,164,119,0.2)]"
@@ -125,13 +125,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCVModal, onOpenContactModa
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex sm:hidden items-center gap-2">
+          {/* Mobile & Tablet Menu Button */}
+          <div className="flex lg:hidden items-center gap-2 sm:gap-3">
             <button
               onClick={onOpenCVModal}
-              className="px-3 py-1.5 text-xs font-medium text-zinc-200 border border-gold-500/30 rounded-full bg-dark-900/60"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-zinc-200 border border-gold-500/30 rounded-full bg-dark-900/60 hover:bg-dark-850 transition-colors"
             >
-              CV
+              <span>CV</span>
+              <Download className="w-3 h-3 text-gold-400" />
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
