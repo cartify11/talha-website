@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Download, Sparkles, ArrowRight } from 'lucide-react';
+import { Menu, X, Download, MessageSquare, ArrowRight } from 'lucide-react';
 
 interface NavbarProps {
   onOpenCVModal?: () => void;
@@ -117,11 +117,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCVModal, onOpenContactModa
 
             <button
               onClick={onOpenContactModal}
-              title="Let's Connect"
-              className="w-9 h-9 rounded-full border border-white/15 bg-[#121824] hover:bg-[#182232] flex items-center justify-center text-zinc-300 hover:text-gold-300 hover:border-gold-400/60 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(245,158,11,0.25)]"
-              aria-label="Connect"
+              title="Let's Talk"
+              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-dark-950 bg-gradient-to-r from-amber-400 via-gold-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(245,158,11,0.35)] hover:shadow-[0_0_25px_rgba(245,158,11,0.5)] hover:scale-105 active:scale-95 group"
             >
-              <Sparkles className="w-4 h-4 text-gold-400" />
+              <MessageSquare className="w-3.5 h-3.5 text-dark-950" />
+              <span>Let's Talk</span>
             </button>
           </div>
 
